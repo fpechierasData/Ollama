@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartes Détective IA - Pro Questions Page 2</title>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 12px;
+            width: 277mm; /* Largeur A4 paysage - marges */
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        
+        .card-header {
+            background-color: #34A853; /* Couleur verte pour la catégorie professionnelle */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .card-title {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-image {
+            background-color: #f0f0f0;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 10px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card-divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 10px;
+        }
+        
+        .card-decision {
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .decision-options {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 15px 12px;
+        }
+        
+        .option {
+            padding: 8px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            width: 48%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .option-ia {
+            border-color: #4285f4;
+            color: #4285f4;
+        }
+        
+        .option-non-ia {
+            border-color: #f5a623;
+            color: #f5a623;
+        }
+        
+        .justification {
+            margin: 5px 15px 10px;
+            color: #666;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /* Styles pour l'impression */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .container {
+                width: 100%;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Exemple 9: Gestion de la paie -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Gestion de la paie</div>
+            <div class="card-image">
+                <img src="images/gestion-paie.png" alt="Logiciel de paie">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 10: Aide à la décision financière -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Aide à la décision financière</div>
+            <div class="card-image">
+                <img src="images/decision-financiere.png" alt="Outil d'aide à la décision">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 11: Analyse de sentiment client -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Analyse de sentiment client</div>
+            <div class="card-image">
+                <img src="images/analyse-sentiment.png" alt="Analyse de sentiment client">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 12: Optimisation des tournées logistiques -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Optimisation de tournées logistiques</div>
+            <div class="card-image">
+                <img src="images/optimisation-logistique.png" alt="Optimisation de tournées logistiques">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 13: Logiciels de facturation -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Logiciels de facturation</div>
+            <div class="card-image">
+                <img src="images/facturation.png" alt="Logiciels de facturation">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 14: Contrôle d'accès aux bâtiments -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Contrôle d'accès aux bâtiments</div>
+            <div class="card-image">
+                <img src="images/controle-acces.png" alt="Contrôle d'accès aux bâtiments">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exemple 15: Signature électronique -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Signature électronique</div>
+            <div class="card-image">
+                <img src="images/signature-electronique.png" alt="Signature électronique">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-decision">
+                <div class="decision-options">
+                    <div class="option option-ia">IA</div>
+                    <div class="option option-non-ia">Non IA</div>
+                </div>
+                <div class="justification">
+                    Pourquoi pensez-vous cela ?
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartes Détective IA - Pro Solutions Page 1</title>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 12px;
+            width: 277mm; /* Largeur A4 paysage - marges */
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            break-inside: avoid;
+            page-break-inside: avoid;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-header {
+            background-color: #34A853; /* Couleur verte pour la catégorie professionnelle */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .card-title {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-image {
+            background-color: #f0f0f0;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 10px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card-divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 10px;
+        }
+        
+        .card-result {
+            padding: 10px 10px 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+        
+        .card-explanation {
+            padding: 0 10px 10px;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.3;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .xsmall-text {
+            font-size: 11px;
+            line-height: 1.2;
+        }
+        
+        .small-text {
+            font-size: 12px;
+            line-height: 1.2;
+        }
+        
+        .is-ai {
+            color: #4285f4;
+        }
+        
+        .not-ai {
+            color: #f5a623;
+        }
+        
+        /* Styles pour l'impression */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .container {
+                width: 100%;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Exemple 1: Réponses automatiques suggérées (IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Réponses automatiques suggérées</div>
+            <div class="card-image">
+                <img src="images/reponses-automatiques.png" alt="Réponses automatiques dans Gmail/Outlook">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation">
+                Analyse votre style d'écriture et le contexte des messages pour proposer des réponses personnalisées.
+            </div>
+        </div>
+        
+        <!-- Exemple 2: Analyse prédictive des ventes (IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Analyse prédictive des ventes</div>
+            <div class="card-image">
+                <img src="images/analyse-predictive.png" alt="Logiciel d'analyse prédictive">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation small-text">
+                Utilise le machine learning pour identifier des patterns dans les données historiques et prédire les tendances futures.
+            </div>
+        </div>
+        
+        <!-- Exemple 3: Outils de recrutement (IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Présélection de CV</div>
+            <div class="card-image">
+                <img src="images/preselection-cv.png" alt="Outil de recrutement">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation small-text">
+                Analyse et compare les CV selon des critères appris, s'adaptant aux profils qui ont été retenus précédemment.
+            </div>
+        </div>
+        
+        <!-- Exemple 4: Filtres anti-spam (IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Filtres anti-spam</div>
+            <div class="card-image">
+                <img src="images/filtres-antispam.png" alt="Filtres anti-spam">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation small-text">
+                Apprennent à reconnaître de nouveaux types de spam en analysant le contenu et les schémas de distribution des messages.
+            </div>
+        </div>
+        
+        <!-- Exemple 5: Tableurs avec formules (Non IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Tableurs avec formules</div>
+            <div class="card-image">
+                <img src="images/tableurs-formules.png" alt="Tableurs Excel">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation">
+                Utilisent des formules mathématiques prédéfinies qui sont appliquées de façon identique sans apprentissage.
+            </div>
+        </div>
+        
+        <!-- Exemple 6: Numérisation de documents (Non IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Numérisation de documents</div>
+            <div class="card-image">
+                <img src="images/numerisation-documents.png" alt="Scanner de documents">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation">
+                Convertit simplement les documents papier en format numérique sans analyse intelligente du contenu.
+            </div>
+        </div>
+        
+        <!-- Exemple 7: Outils de conception graphique vectorielle (Non IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Conception graphique vectorielle</div>
+            <div class="card-image">
+                <img src="images/conception-vectorielle.png" alt="Logiciel de design vectoriel">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation small-text">
+                Manipule des formes mathématiques selon des règles fixes sans capacité d'apprentissage ou d'adaptation.
+            </div>
+        </div>
+        
+        <!-- Exemple 8: Gestion de projet (Non IA) -->
+        <div class="card">
+            <div class="card-header">PROFESSIONNEL</div>
+            <div class="card-title">Gestion de projet</div>
+            <div class="card-image">
+                <img src="images/gestion-projet.png" alt="Outil de gestion de projet">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation">
+                Suit et organise les tâches selon des paramètres fixés par l'utilisateur sans optimisation intelligente.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

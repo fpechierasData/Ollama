@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartes Détective IA - Solutions Quotidien A4 Paysage (Page 1)</title>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 12px;
+            width: 277mm; /* Largeur A4 paysage - marges */
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            break-inside: avoid;
+            page-break-inside: avoid;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-header {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .card-title {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-image {
+            background-color: #f0f0f0;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 10px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card-divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 10px;
+        }
+        
+        .card-result {
+            padding: 10px 10px 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+        
+        .card-explanation {
+            padding: 0 10px 10px;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.3;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .xsmall-text {
+            font-size: 11px;
+            line-height: 1.2;
+        }
+        
+        .small-text {
+            font-size: 12px;
+            line-height: 1.2;
+        }
+        
+        .is-ai {
+            color: #4285f4;
+        }
+        
+        .not-ai {
+            color: #f5a623;
+        }
+        
+        /* Styles pour l'impression */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .container {
+                width: 100%;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Exemple 1: Suggestions de films (IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Suggestions de films</div>
+            <div class="card-image">
+                <img src="images/suggestions-films.png" alt="Suggestions de films">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation">
+                Utilise le machine learning pour analyser vos préférences et suggérer du contenu personnalisé.
+            </div>
+        </div>
+        
+        <!-- Exemple 2: Calculatrice (Non IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Calculatrice</div>
+            <div class="card-image">
+                <img src="images/calculatrice.png" alt="Calculatrice">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation">
+                Suit des règles mathématiques prédéfinies sans apprentissage ni adaptation.
+            </div>
+        </div>
+        
+        <!-- Exemple 3: Assistants vocaux (IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Assistants vocaux</div>
+            <div class="card-image">
+                <img src="images/assistants-vocaux.png" alt="Assistants vocaux">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation">
+                Utilise le traitement du langage naturel pour comprendre vos questions et s'adapter à votre voix.
+            </div>
+        </div>
+        
+        <!-- Exemple 4: Réveil/alarme (Non IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Réveil/alarme</div>
+            <div class="card-image">
+                <img src="images/reveil-alarme.png" alt="Réveil/alarme programmée">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation">
+                Fonctionne selon des paramètres fixes que vous définissez, sans capacité d'apprentissage.
+            </div>
+        </div>
+        
+        <!-- Exemple 5: Filtres photo (IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Filtres photo</div>
+            <div class="card-image">
+                <img src="images/filtres-photo.png" alt="Filtres photo">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation">
+                Utilise la reconnaissance faciale et des algorithmes d'apprentissage pour modifier votre apparence.
+            </div>
+        </div>
+        
+        <!-- Exemple 6: Galerie photo (Non IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Tri galerie photo</div>
+            <div class="card-image">
+                <img src="images/galerie-photo.png" alt="Galerie photo">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result not-ai">Ce n'est pas de l'IA 🧠</div>
+            <div class="card-explanation">
+                Trie simplement vos images selon les métadonnées de date sans analyse ni apprentissage.
+            </div>
+        </div>
+        
+        <!-- Exemple 7: Navigation GPS (IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Navigation GPS</div>
+            <div class="card-image">
+                <img src="images/navigation-gps.png" alt="Applications de navigation GPS">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation">
+                Analyse les données de trafic, prédit les embouteillages et suggère des itinéraires optimisés.
+            </div>
+        </div>
+        
+        <!-- Exemple 8: Traduction instantanée (IA) -->
+        <div class="card">
+            <div class="card-header">QUOTIDIEN</div>
+            <div class="card-title">Traduction instantanée</div>
+            <div class="card-image">
+                <img src="images/traduction-instantanee.png" alt="Traduction instantanée">
+            </div>
+            <div class="card-divider"></div>
+            <div class="card-result is-ai">C'est de l'IA ! ✨</div>
+            <div class="card-explanation">
+                Analyse le contexte linguistique pour traduire des phrases complexes au-delà de la simple correspondance.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
